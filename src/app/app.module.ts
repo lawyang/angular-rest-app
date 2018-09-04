@@ -15,8 +15,8 @@ import { ItemsListComponent } from './items/items-list/items-list.component';
 import { ItemDetailComponent } from './items/item-detail/item-detail.component';
 import { ItemsSearchComponent } from './items/items-search/items-search.component';
 import { WidgetsComponent } from './widgets/widgets.component';
-import { WidgetsListComponent } from './widgets/widgets-list/widgets-list.component';
-import { WidgetDetailComponent } from './widgets/widget-detail/widget-detail.component';
+// import { WidgetsListComponent } from './widgets/widgets-list/widgets-list.component';
+// import { WidgetDetailComponent } from './widgets/widget-detail/widget-detail.component';
 import { HomeComponent } from './home/home.component';
 import { NewsletterComponent } from './newsletter/newsletter.component';
 import { ItemComponent } from './items/item/item.component';
@@ -32,8 +32,8 @@ import { NachosComponent } from './nachos/nachos.component';
     ItemDetailComponent,
     ItemsSearchComponent,
     WidgetsComponent,
-    WidgetsListComponent,
-    WidgetDetailComponent,
+    // WidgetsListComponent,
+    // WidgetDetailComponent,
     NewsletterComponent,
     ItemComponent,
     BurritosComponent,

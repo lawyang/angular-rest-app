@@ -1,11 +1,50 @@
 <div class="container">
-  <app-widgets-list class="col-50" [widgets]="widgets"
-                  (selected)="selectWidget($event)"
-                  (deleted)="deleteWidget($event)">
-  </app-widgets-list>
+  <!-- WIDGETS LIST -->
+  <div class="col-50">
+    <md-card>
+      <md-card-header>
+        <md-card-title>
+          <h1>Widgets</h1>
+        </md-card-title>
+      </md-card-header>
+      <md-card-content>
+        <md-list>
+          <md-list-item *ngFor="let widget of widgets">
+            <h3 md-line> {{widget.name}} </h3>
+            <button md-icon-button>
+              <md-icon>close</md-icon>
+            </button>
+            <p md-line>
+              {{widget.description}}
+            </p>
+          </md-list-item>
+        </md-list>
+      </md-card-content>
+    </md-card>
+  </div>
 
-  <app-widget-detail class="col-50" [widget]="currentWidget"
-                   (saved)="saveWidget($event)"
-                   (cancelled)="cancel($event)">
-  </app-widget-detail>
+
+  <!-- WIDGET DETAILS -->
+  <div class="col-50">
+    <md-card>
+      <md-card-header>
+        <md-card-title>
+          <h1>
+            Select a Widget
+          </h1>
+        </md-card-title>
+      </md-card-header>
+      <form>
+        <md-card-content>
+
+
+
+        </md-card-content>
+        <md-card-actions>
+          <button type="submit" md-button>Save</button>
+          <button type="button" md-button>Cancel</button>
+        </md-card-actions>
+      </form>
+    </md-card>
+  </div>
 </div>
