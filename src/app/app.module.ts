@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppMaterialModule } from './app-material.module';
 
-import { ItemsService, NotificationsService, WidgetsService } from './shared';
+import { ItemsService, NotificationsService, WidgetsService, CaffeineService } from './shared';
 
 import { AppComponent } from './app.component';
 import { ItemsComponent } from './items/items.component';
@@ -51,7 +51,8 @@ import { NachosComponent } from './nachos/nachos.component';
   providers: [
     ItemsService,
     NotificationsService,
-    WidgetsService
+    WidgetsService,
+    CaffeineService
   ],
   bootstrap: [AppComponent]
 })

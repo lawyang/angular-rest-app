@@ -7,6 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WidgetsComponent implements OnInit {
   selectedWidget;
+
+  testWidgets = {
+    '1': {
+      name: 'One'
+    },
+    '2': {
+      name: 'Two'
+    },
+    '3': {
+      name: 'Three'
+    },
+  };
+
+  key = '1';
+  firstWidget = this.testWidgets[this.key];
+
   widgets = [
     {
       id: 1,

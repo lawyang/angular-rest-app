@@ -3,6 +3,7 @@ import { ItemsService } from '../shared/items.service';
 import { WidgetsService } from '../shared/widgets.service';
 import { Item } from '../shared/item.model';
 import { Widget } from '../shared/widget.model';
+import { CaffeineService } from '../shared';
 
 @Component({
   selector: 'app-home',
@@ -13,14 +14,17 @@ import { Widget } from '../shared/widget.model';
 export class HomeComponent implements OnInit {
   items: Item[];
   widgets: Widget[];
+  sources;
 
   constructor(private itemsService: ItemsService,
-              private widgetsService: WidgetsService) {
+              private widgetsService: WidgetsService,
+              private caffeineService: CaffeineService) {
   }
 
   ngOnInit() {
     this.getItems();
     this.getWidgets();
+    this.sources = this.caffeineService.sources;
   }
 
   getItems() {
