@@ -1,25 +1,34 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+/* tslint:disable:no-unused-variable */
+
+import { TestBed, async, ComponentFixture } from '@angular/core/testing';
 
 import { WidgetsComponent } from './widgets.component';
+import { WidgetsService } from '../shared';
 
-describe('WidgetsComponent', () => {
-  let component: WidgetsComponent;
+class WidgetsServiceStub {}
+
+describe('Component: Items', () => {
+  let comp: WidgetsComponent;
   let fixture: ComponentFixture<WidgetsComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ WidgetsComponent ]
-    })
-    .compileComponents();
-  }));
-
   beforeEach(() => {
-    fixture = TestBed.createComponent(WidgetsComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    TestBed.configureTestingModule({
+      declarations: [
+        WidgetsComponent
+      ],
+      providers: [
+        {provide: WidgetsService, useClass: WidgetsServiceStub}
+      ]
+    });
+
+    fixture = TestBed
+      .overrideComponent(WidgetsComponent, {set: {template: ''}})
+      .createComponent(WidgetsComponent);
+
+    comp = fixture.componentInstance;
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should create an instance', () => {
+    expect(comp).toBeTruthy();
   });
 });

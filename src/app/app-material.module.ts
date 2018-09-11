@@ -11,8 +11,6 @@ import {
   MdToolbarModule
 } from '@angular/material';
 
-
-
 @NgModule({
   imports: [
     MdButtonModule,

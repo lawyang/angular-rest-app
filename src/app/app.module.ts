@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppMaterialModule } from './app-material.module';
 
-import { ItemsService, NotificationsService, WidgetsService, CaffeineService } from './shared';
+import { ItemsService, NotificationsService, WidgetsService } from './shared';
 
 import { AppComponent } from './app.component';
 import { ItemsComponent } from './items/items.component';
@@ -15,13 +15,11 @@ import { ItemsListComponent } from './items/items-list/items-list.component';
 import { ItemDetailComponent } from './items/item-detail/item-detail.component';
 import { ItemsSearchComponent } from './items/items-search/items-search.component';
 import { WidgetsComponent } from './widgets/widgets.component';
-// import { WidgetsListComponent } from './widgets/widgets-list/widgets-list.component';
-// import { WidgetDetailComponent } from './widgets/widget-detail/widget-detail.component';
+import { WidgetsListComponent } from './widgets/widgets-list/widgets-list.component';
+import { WidgetDetailComponent } from './widgets/widget-detail/widget-detail.component';
 import { HomeComponent } from './home/home.component';
 import { NewsletterComponent } from './newsletter/newsletter.component';
 import { ItemComponent } from './items/item/item.component';
-import { BurritosComponent } from './burritos/burritos.component';
-import { NachosComponent } from './nachos/nachos.component';
 
 @NgModule({
   declarations: [
@@ -32,12 +30,10 @@ import { NachosComponent } from './nachos/nachos.component';
     ItemDetailComponent,
     ItemsSearchComponent,
     WidgetsComponent,
-    // WidgetsListComponent,
-    // WidgetDetailComponent,
+    WidgetsListComponent,
+    WidgetDetailComponent,
     NewsletterComponent,
-    ItemComponent,
-    BurritosComponent,
-    NachosComponent
+    ItemComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -51,8 +47,7 @@ import { NachosComponent } from './nachos/nachos.component';
   providers: [
     ItemsService,
     NotificationsService,
-    WidgetsService,
-    CaffeineService
+    WidgetsService
   ],
   bootstrap: [AppComponent]
 })
