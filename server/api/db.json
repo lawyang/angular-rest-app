@@ -2,7 +2,7 @@
   "items": [
     {
       "id": 1,
-      "name": "Red Item",
+      "name": "Remote Red Item",
       "description": "This is a red item"
     },
     {
@@ -34,6 +34,11 @@
       "id": 7,
       "name": "Violet Item",
       "description": "This is a violet item"
+    },
+    {
+      "id": 8,
+      "name": "Red",
+      "description": "blue"
     }
   ],
   "widgets": [
