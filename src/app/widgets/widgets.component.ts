@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { WidgetsService, Widget } from '../shared';
+import { WidgetsService, Widget} from '../shared';
 import { Router, ActivatedRoute } from '@angular/router';
+import { Http, Headers } from '@angular/http';
+import { log } from 'util';
 
 @Component({
   selector: 'app-widgets',
@@ -11,11 +13,13 @@ export class WidgetsComponent implements OnInit {
   widgets: Widget[];
   currentWidget: Widget;
 
-  constructor(private widgetsService: WidgetsService) { }
+  constructor(private widgetsService: WidgetsService, private http: Http) { }
 
   ngOnInit() {
     this.getWidgets();
     this.resetCurrentWidget();
+    const obs = this.http.get('https://www.behindthename.com/api/lookup.json?name=mary&key=la201484095');
+    obs.subscribe((response) => console.log(response));
   }
 
   resetCurrentWidget() {
@@ -66,4 +70,5 @@ export class WidgetsComponent implements OnInit {
         this.resetCurrentWidget();
       });
   }
+
 }

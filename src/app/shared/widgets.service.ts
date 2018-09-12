@@ -2,13 +2,21 @@ import { Http, Headers } from '@angular/http';
 import { Injectable } from '@angular/core';
 import { Widget } from './widget.model';
 import 'rxjs/add/operator/map';
+import { log } from 'util';
 
 const BASE_URL = 'http://localhost:3000/widgets/';
 const HEADER = { headers: new Headers({ 'Content-Type': 'application/json' }) };
+// const NAME_URL = 'https://www.behindthename.com/api/lookup.json?name=mary&key=la201484095';
+
 
 @Injectable()
 export class WidgetsService {
   constructor(private http: Http) {}
+
+  // name() {
+  //   return this.http.get(NAME_URL)
+  //     .map(res => res.json());
+  // }
 
   all() {
     return this.http.get(BASE_URL)
